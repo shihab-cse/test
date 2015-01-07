@@ -1,0 +1,32 @@
+<!doctype html>
+<html ng-app="myNoteapp">
+<head>
+	<meta charset="utf-8">
+	<title>Aj application</title>
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+</head>
+
+<body>	
+
+	
+	<div ng-controller="myNoteCon">
+    	<h2>My Note</h2>
+        
+        <p><textarea name="note" ng-model="note" cols="30" rows="10"></textarea></p>
+        
+        <p><input type="submit" ng-click="save();" value="save">&nbsp; <input type="submit" ng-click="clear();" value="Clear"></p>
+        
+        <p>Number of characters : <span ng-bind="left();"></span> </p>
+        
+        
+    </div>
+	
+    
+	
+	<script src="myNoteapp.js"></script>
+    <script src="myNoteCon.js"></script>
+
+
+</body>
+</html>

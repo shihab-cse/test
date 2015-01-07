@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+	<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+</head>
+
+<body>
+
+	<div ng-app="" ng-controller="mycontroller2">
+    
+    	<p>Name : <input ng-model="name" type="text"></p>
+        <p>Age : <input ng-model="age" type="text"></p>
+        
+        
+        <div>the last name is : {{ (name*age) | currency  }}</div>
+           
+    	
+    </div>
+
+	<script src="mycontroller.js"></script>
+
+
+</body>
+</html>

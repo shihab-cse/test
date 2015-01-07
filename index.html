@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+</head>
+    
+<body>
+<h2>Validation Example</h2>
+
+
+
+
+	<form name="myForm" ng-app="" ng-controller="myCon">
+    
+    	<p>Name : <br>
+            <input type="text" name="name" ng-model="name" required>
+            <span style="color:red" ng-show="myForm.name.$dirty && myForm.name.$invalid">
+            	<span ng-show="myForm.name.$error.required">Name is required</span>
+            </span>          
+        </p>
+        
+        <p>
+        	<input type="submit" name="submit" ng-disabled="myForm.name.$dirty && myForm.name.$invalid">
+        </p>
+    
+    </form>
+	
+    
+    <script>
+    	function myCon($scope){
+			$scope.name = "shehab";
+		}
+    </script>
+    
+
+
+
+</body>
+</html>
